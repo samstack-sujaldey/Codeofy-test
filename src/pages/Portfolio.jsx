@@ -4,8 +4,10 @@ import Food from "../assets/Food.jpeg";
 import saas from "../assets/saas.jpeg";
 import ecommerce from "../assets/ecommerce.jpeg";
 import TaskManager from "../assets/TaskManager.jpeg";
-import portfolioWeb from "../assets/portfolioWeb.jpeg"
+import portfolioWeb from "../assets/portfolioWeb.jpeg";
 import Footer from "../components/Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const projects = [
   {
@@ -69,10 +71,11 @@ const Portfolio = () => {
               className="bg-[#1e1638] rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition"
             >
               {/* Image */}
-              <img
+              <LazyLoadImage
                 src={item.img}
                 alt={item.title}
-                className="h-56 w-full object-cover"
+                effect="blur"
+                className="h-full w-full object-cover"
               />
 
               {/* Content */}

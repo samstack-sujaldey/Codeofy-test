@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
-
       {/* Background Glow */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-500/30 rounded-full blur-[120px]" />
@@ -34,19 +34,23 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-center gap-4">
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 px-8 py-4 rounded-xl font-semibold shadow-lg"
-          >
-            Get Started →
-          </motion.button>
+          <Link to="/services">
+            <motion.button
+              whileHover={{ scale: 1.08 }}
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 px-8 py-4 rounded-xl font-semibold shadow-lg"
+            >
+              Get Started →
+            </motion.button>
+          </Link>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="border border-white/30 px-8 py-4 rounded-xl"
-          >
-            View Portfolio
-          </motion.button>
+          <Link to="/portfolio">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="border border-white/30 px-8 py-4 rounded-xl"
+            >
+              View Portfolio
+            </motion.button>
+          </Link>
         </div>
       </motion.div>
     </section>

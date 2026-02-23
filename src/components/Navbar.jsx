@@ -51,9 +51,11 @@ const Navbar = () => {
         </ul>
 
         {/* Button */}
-        <button className="hidden md:block bg-purple-500 hover:bg-purple-600 px-5 py-2 rounded-lg font-semibold">
-          Get Started
-        </button>
+        <Link to="/services">
+          <button className="hidden md:block bg-purple-500 hover:bg-purple-600 px-5 py-2 rounded-lg font-semibold">
+            Get Started
+          </button>
+        </Link>
       </div>
     </nav>
   );

@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -8,7 +9,6 @@ const Services = () => {
 
       <section className="min-h-screen pt-32 pb-24 bg-gradient-to-br from-[#141126] via-[#1e1a3a] to-[#1b1535] text-white">
         <div className="max-w-7xl mx-auto px-6">
-
           {/* Heading */}
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -23,7 +23,6 @@ const Services = () => {
 
           {/* Pricing Cards */}
           <div className="grid md:grid-cols-3 gap-10">
-
             {/* Starter */}
             <PricingCard
               title="Starter"
@@ -69,16 +68,23 @@ const Services = () => {
                 "Delivery in 10–14 Days",
               ]}
             />
-
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 const PricingCard = ({ title, price, subtitle, features, popular }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/checkout", {
+      state: { plan: title, price },
+    });
+  };
+
   return (
     <div
       className={`relative rounded-2xl p-10 bg-gradient-to-b from-[#4c6ef5] to-[#5f3dc4]
@@ -105,6 +111,7 @@ const PricingCard = ({ title, price, subtitle, features, popular }) => {
       </ul>
 
       <button
+        onClick={handleClick}
         className={`w-full py-3 rounded-lg font-semibold
         ${popular ? "bg-white text-purple-600" : "bg-white/20 hover:bg-white/30"}`}
       >

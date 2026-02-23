@@ -29,6 +29,15 @@ const Navbar = () => {
           </li>
           <li>
             {" "}
+            <Link
+              to="/testimonials"
+              className="hover:text-white cursor-pointer"
+            >
+              Testimonials
+            </Link>
+          </li>
+          <li>
+            {" "}
             <Link to="/portFolio" className="hover:text-white cursor-pointer">
               Portfolio
             </Link>

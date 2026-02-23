@@ -1,50 +1,54 @@
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] flex items-center justify-center text-white">
-      {/* Hero */}
-      <div className="text-center max-w-3xl px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Your Vision, <span className="text-purple-400">Our Code.</span>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
+
+      {/* Background Glow */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-500/30 rounded-full blur-[120px]" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 max-w-5xl mx-auto px-6 text-center"
+      >
+        <motion.span
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          className="inline-block mb-6 px-4 py-1 rounded-full bg-white/10 backdrop-blur text-purple-300 text-sm"
+        >
+          🚀 Building Digital Experiences
+        </motion.span>
+
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6">
+          Turning <span className="text-purple-400">Ideas</span> Into <br />
+          Powerful <span className="text-indigo-400">Digital Products</span>
         </h1>
 
-        <p className="text-gray-300 text-lg mb-8">
-          We transform your ideas into powerful digital solutions with
-          cutting-edge technology and innovative design.
+        <p className="max-w-2xl mx-auto text-gray-300 text-lg mb-10">
+          We design and develop high-performance websites and apps that help
+          businesses grow faster.
         </p>
 
         <div className="flex justify-center gap-4">
-          <button className="bg-purple-500 hover:bg-purple-600 px-6 py-3 rounded-lg font-semibold">
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 px-8 py-4 rounded-xl font-semibold shadow-lg"
+          >
             Get Started →
-          </button>
+          </motion.button>
 
-          <button className="border border-gray-400 px-6 py-3 rounded-lg">
-            ▶ See Portfolio
-          </button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className="border border-white/30 px-8 py-4 rounded-xl"
+          >
+            View Portfolio
+          </motion.button>
         </div>
-
-        {/* Stats */}
-        <div className="max-w-5xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <h2 className="text-3xl font-bold">10+</h2>
-            <p className="text-gray-400">Projects</p>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-bold">5+</h2>
-            <p className="text-gray-400">Clients</p>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-bold">24/7</h2>
-            <p className="text-gray-400">Support</p>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-bold">100%</h2>
-            <p className="text-gray-400">Satisfaction</p>
-          </div>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

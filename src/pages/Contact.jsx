@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <section className="min-h-screen bg-gradient-to-br from-[#2b1b4d] via-[#3a236a] to-[#1b1436] text-white px-6 py-24">
+      <section className="min-h-screen text-white px-6 py-24">
         {/* Header */}
         <div className="max-w-5xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
@@ -26,7 +26,7 @@ const Contact = () => {
 
               <div className="space-y-5">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500">
+                  <div className="p-3 rounded-lg bg-linear-to-r from-purple-500 to-blue-500">
                     <Mail size={20} />
                   </div>
                   <div>
@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500">
+                  <div className="p-3 rounded-lg bg-linear-to-r from-purple-500 to-blue-500">
                     <Phone size={20} />
                   </div>
                   <div>
@@ -46,7 +46,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500">
+                  <div className="p-3 rounded-lg bg-linear-to-r from-purple-500 to-blue-500">
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition py-3 rounded-lg font-semibold"
+                className="w-full flex items-center justify-center gap-2 bg-linear-to-r from-purple-500 to-blue-500 hover:opacity-90 transition py-3 rounded-lg font-semibold"
               >
                 <Send size={18} />
                 Send Message

@@ -3,8 +3,8 @@ import analytics from "../assets/analytics.jpeg";
 import Food from "../assets/Food.jpeg";
 import saas from "../assets/saas.jpeg";
 import ecommerce from "../assets/ecommerce.jpeg";
-import TaskManager from "../assets/TaskManager.jpeg";
-import portfolioWeb from "../assets/portfolioWeb.jpeg";
+import TaskManager from "../assets/TaskManager.webp";
+import portfolioWeb from "../assets/portfolioWeb.webp";
 import Footer from "../components/Footer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -53,7 +53,7 @@ const Portfolio = () => {
     <>
       <Navbar />
 
-      <div className="min-h-screen bg-gradient-to-b from-[#2b1b4d] to-[#3b2663] text-white pt-32 px-6 pb-30">
+      <div className="min-h-screen text-white pt-32 px-6 pb-30">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Portfolio</h1>

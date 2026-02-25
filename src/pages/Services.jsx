@@ -7,7 +7,7 @@ const Services = () => {
     <>
       <Navbar />
 
-      <section className="min-h-screen pt-32 pb-24 bg-gradient-to-br from-[#141126] via-[#1e1a3a] to-[#1b1535] text-white">
+      <section className="min-h-screen pt-32 pb-24 text-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -87,7 +87,7 @@ const PricingCard = ({ title, price, subtitle, features, popular }) => {
 
   return (
     <div
-      className={`relative rounded-2xl p-10 bg-gradient-to-b from-[#4c6ef5] to-[#5f3dc4]
+      className={`relative rounded-2xl p-10 bg-linear-to-b from-[#4c6ef5] to-[#5f3dc4]
       ${popular ? "scale-105 shadow-2xl" : "opacity-95"}`}
     >
       {/* Popular badge */}

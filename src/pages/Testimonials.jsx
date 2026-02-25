@@ -24,7 +24,7 @@ const Testimonials = () => {
   return (
     <>
       <Navbar />
-      <section className="py-24 bg-gradient-to-br from-[#1a1446] to-[#0f0c29] text-white">
+      <section className="py-24 text-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
           <p className="text-gray-300 mb-14">

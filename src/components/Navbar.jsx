@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 z-50 bg-transparent text-white backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold text-purple-400">Codeofy</div>
+        <div className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Codeofy</div>
 
         {/* Menu */}
         <ul className="hidden md:flex gap-8 text-gray-300">

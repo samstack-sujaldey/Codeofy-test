@@ -6,7 +6,7 @@ const About = () => {
     <>
       <Navbar />
 
-      <section className="min-h-screen pt-32 pb-24 bg-gradient-to-br from-[#1b1a3a] via-[#2e245e] to-[#3a2a6d] text-white">
+      <section className="min-h-screen pt-32 pb-24 text-white">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Page Heading */}

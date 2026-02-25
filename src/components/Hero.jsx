@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
       {/* Background Glow */}
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-500/30 rounded-full blur-[120px]" />
+      <div className="absolute -top-40 -left-40 w-125 h-125 bg-purple-600/30 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-100 h-100 bg-indigo-500/30 rounded-full blur-[120px]" />
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           <Link to="/services">
             <motion.button
               whileHover={{ scale: 1.08 }}
-              className="bg-gradient-to-r from-purple-500 to-indigo-500 px-8 py-4 rounded-xl font-semibold shadow-lg"
+              className="bg-linear-to-r from-purple-500 to-indigo-500 px-8 py-4 rounded-xl font-semibold shadow-lg"
             >
               Get Started →
             </motion.button>
